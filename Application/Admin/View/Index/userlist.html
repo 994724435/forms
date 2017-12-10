@@ -1,0 +1,67 @@
+
+
+
+<include file="Common/header" />
+           
+        
+        <div id="page-wrapper">
+        <div class="graphs">	  
+    <div class="content_bottom">
+     <div class="col-md-12 span_3">
+		  <div class="bs-example1" data-example-id="contextual-table">
+		    <table class="table">
+		      <thead>
+		        <tr style="text-align: center;">
+		           <!--<h3> <span><a href="__ROOT__/index.php/Admin/Index/adduser">添加用户</a></h3>-->
+		        </tr>
+		        <tr>
+		          <th>编号</th>
+					<th>姓名</th>
+		          <th >出生日期</th>
+					<th>电话</th>
+					<th>金额</th>
+					<th>提交时间</th>
+		        </tr>
+		      </thead>
+		      <tbody>	      
+		      <?php 
+		      		$i = 1;
+		      	?>
+		      <foreach name="re" item='v'>
+		      
+		      	<?php 
+		      		if(($i%2)==1){
+						echo "<tr class='active'>";
+					}else{
+						echo "<tr class='info'>";
+					}
+		      	?>
+		        
+		          <th scope="row">{$v.id}</th>
+				  <th>{$v.name}</th>
+		          <th>{$v.birthday}</th>
+				  <th>{$v.phone}</th>
+				  <th>{$v.number}</th>
+				  <th>{$v.dadtime}</th>
+				  <!--<th><a href="__ROOT__/index.php/Admin/Index/editeuser/id/{$v.id}">修改</a>|<a href="__ROOT__/index.php/Admin/Index/deleteuser/id/{$v.id}">删 除</a> </th>-->
+		        </tr>
+		      	<?php $i++ ;?>
+		       </foreach>		      
+		      </tbody>
+		    </table>
+		   </div>
+	   </div>
+		<div class="clearfix"> </div>
+	    </div>
+		<div class="copy">
+            <p>Copyright &copy; 2016  All rights reserved.</p>
+	    </div>
+		</div>
+       </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="__ROOT__/Public/admin/js/bootstrap.min.js"></script>
+</body>
+</html>
